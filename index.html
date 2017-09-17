@@ -13,15 +13,50 @@
         <section roll="order form">
             <h2>Basic V-Neck Tee</h2>
             <form roll="choose product">
-                <div>
+                <div roll="display shirt">
                     <!--picture of shirt 300x300px, changes based on color selection-->
+                    <img src="images/white-v-neck.jpg" alt="white-v-neck">
+                    <p id="shirt-price">$20.00</p>
                 </div>
-                <div>
+
+
+                <fieldset roll="select size">
                     <!--radio buttons for shirt size-->
-                </div>
-                <div>
+                    <legend>Select a size</legend>
+
+                    <div class="size-control-set">
+                        <input type="radio" name="size" id="small-shirt" value="Small" >
+                        <label for="small-shirt">Small</label>
+
+                        <input type="radio" name="size" id="medium-shirt" value="Medium">
+                        <label for="medium-shirt">Medium</label>
+
+                        <input type="radio" name="size" id="large-shirt" value="Large">
+                        <label for="large-shirt">Large</label>
+                    </div>
+
+                </fieldset>
+
+                <fieldset roll="select color">
                     <!--radio buttons for shirt color-->
-                </div>
+                    <legend>Select a color</legend>
+
+                    <div class="color-control-set">
+                        <input type="radio" name="color" id="white-shirt" value="White">
+                        <label for="white-shirt">White</label>
+
+                        <input type="radio" name="color" id="red-shirt" value="Red">
+                        <label for="red-shirt">Red</label>
+
+                        <input type="radio" name="color" id="blue-shirt" value="Blue">
+                        <label for="blue-shirt">Blue</label>
+
+                        <input type="radio" name="color" id="black-shirt" value="Black">
+                        <label for="black-shirt">Black</label>
+                    </div>
+
+                </fieldset>
+
             </form>
         </section>
 
@@ -30,25 +65,43 @@
             <form roll="input shipping details">
                 <div class="shipping-info">
                     <!-- Name input form-->
+                    <label for="name-input">Name</label>
+                    <input type="text" name="name-input" id="name-input" required>
                 </div>
                 <div class="shipping-info">
                     <!-- Email input form-->
+                    <label for="email-input">Email</label>
+                    <input type="email" name="email-input" id="email-input" required>
                 </div>
                 <div class="shipping-info">
                     <!-- Address input form-->
+                    <label for="address1-input">Address 1</label>
+                    <input type="text" name="address1-input" id="address1-input" required>
                     <!-- Address2 input form-->
+                    <label for="address2-input">Address 2</label>
+                    <input type="text" name="address2-input" id="address2-input"
                 </div>
                 <div class="shipping-info">
                     <!-- city input form-->
+                    <label for="city-input">City</label>
+                    <input type="text" name="city-input" id="city-input" required>
                     <!-- state input form-->
+                    <label for="state-input">State</label>
+                    <input type="text" name="state-input" id="state-input" required>
                     <!-- ZipCode input form-->
+                    <label for="zip-input">Zip</label>
+                    <input type="number" name="zip-input" id="zip-input" required>
                 </div>
                 <div class="shipping-info">
                     <!-- Country input form / drop down -->
+                    <label for="country-select">Country</label>
+                    <select name="country-select" id="country-select">
+                        <option value="country">Country</option>
+                    </select>
                 </div>
             </form>
         </section>
-        <section roll="summary">
+        <section roll="checkout summary">
             <h2>Order Summary</h2>
             <form>
                 <div>
@@ -68,6 +121,6 @@
     </main>
 
     <footer></footer>
-    
+
 </body>
 </html>
