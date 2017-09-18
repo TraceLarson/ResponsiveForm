@@ -18,28 +18,28 @@
             <form roll="choose product">
                 <div roll="display-shirt">
                     <!--picture of shirt 300x300px, changes based on color selection-->
-                    <img src="images/white-v-neck.jpg" alt="white-v-neck">
-                    <p id="shirt-price">$20.00</p>
+                    <img src="images/white-v-neck.jpg" alt="white-v-neck" id="order-display-shirt">
+                    <p id="order-shirt-price">$20.00</p>
                 </div>
 
-                <fieldset roll="select-size">
+                <fieldset roll="select-size" id="order-select-size">
                     <!--radio buttons for shirt size-->
                     <legend>Select a size</legend>
 
                     <div class="size-control-set">
-                        <input type="radio" name="size" id="small-shirt" value="Small">
-                        <label for="small-shirt">Small</label>
+                        <input type="radio" name="size" id="order-small-shirt" value="Small">
+                        <label for="order-small-shirt">Small</label>
 
-                        <input type="radio" name="size" id="medium-shirt" value="Medium">
-                        <label for="medium-shirt">Medium</label>
+                        <input type="radio" name="size" id="order-medium-shirt" value="Medium">
+                        <label for="order-medium-shirt">Medium</label>
 
-                        <input type="radio" name="size" id="large-shirt" value="Large">
-                        <label for="large-shirt">Large</label>
+                        <input type="radio" name="size" id="order-large-shirt" value="Large">
+                        <label for="order-large-shirt">Large</label>
                     </div>
 
                 </fieldset>
 
-                <fieldset roll="select-color">
+                <fieldset roll="select-color" id="order-select-color">
                     <!--radio buttons for shirt color-->
                     <legend>Select a color</legend>
 
