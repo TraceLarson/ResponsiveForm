@@ -5,6 +5,7 @@
     <title>Responsive Form</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/content.js"></script>
 </head>
 <body>
     <header roll="banner">
@@ -88,10 +89,10 @@
                     <input type="text" name="city-input" id="city-input" required>
                     <!-- state input form-->
                     <label for="state-input">State</label>
-                    <input type="text" name="state-input" id="state-input" required>
+                    <input type="text" maxlength="2" name="state-input" id="state-input" required pattern="[A-Z]{2}">
                     <!-- ZipCode input form-->
                     <label for="zip-input">Zip</label>
-                    <input type="number" name="zip-input" id="zip-input" required>
+                    <input type="number" maxlength="5" name="zip-input" id="zip-input" required pattern="\d{5}">
                 </div>
                 <div class="shipping-info">
                     <!-- Country input form / drop down -->
@@ -358,24 +359,30 @@
                 <div class="checkout-summary">
                     <!-- shirt type "Basic V-Neck Tee + size + color, price $20-->
                     <label for="checkout-product-name">Product Name</label>
-                    <p id="checkout-product-name"></p>
+                    <input type="text" name="checkout-product-name" id="checkout-product-name" disabled="disabled">
+                    <!--<p id="checkout-product-name"></p>-->
                 </div>
                 <div class="checkout-summary">
                     <!-- shipping price which is free-->
                     <label for="checkout-shipping">Shipping</label>
-                    <p id="checkout-shipping"></p>
+                    <input type="text" name="checkout-shippingt" id="checkout-shipping" disabled="disabled">
+                    <!--<p id="checkout-shipping"></p>-->
                 </div>
                 <div class="checkout-summary">
                     <!-- display price of shirt-->
                     <label for="checkout-total">Total</label>
-                    <p id="checkout-total"></p>
+                    <input type="text" name="checkout-total" id="checkout-total" disabled="disabled">
+                    <!--<p id="checkout-total"></p>-->
                 </div>
                 <div class="checkout-summary">
                     <!-- display shipping address-->
                     <h3>Shipping Address</h3>
-                    <p id="checkout-address-name"></p>
-                    <p id="checkout-address1"></p>
-                    <p id="checkout-address-city-state-zip"></p>
+                    <!--<p id="checkout-address-name"></p>-->
+                    <!--<p id="checkout-address1"></p>-->
+                    <!--<p id="checkout-address-city-state-zip"></p>-->
+                    <input type="text" name="" id="checkout-address-name" required>
+                    <input type="text" name="" id="checkout-address1" required>
+                    <input type="text" name="" id="checkout-address-city-state-zip" required>
                 </div>
                 <div>
                     <!-- Button to submit the form -->
