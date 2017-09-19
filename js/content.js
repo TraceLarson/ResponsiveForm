@@ -1,30 +1,22 @@
-/**
- * Created by tracelarson on 9/14/17.
- */
-
 //Order Form controls
-const orderDisplayShirt = document.querySelector('#order-display-shirt');
-const orderShirtPrice = document.querySelector('#order-shirt-price');
-const orderSelectSize = document.querySelector('#order-select-size');
-const orderSelectColor = document.querySelector('#order-select-color');
+var orderSelectColor = document.querySelector('#order-select-color');
 
 //Shipping Details controls
-const shippingName = document.querySelector('#name-input');
-const shippingEmail = document.querySelector('#email-input');
-const shippingAddressOne = document.querySelector('#address1-input');
-const shippingAddressTwo = document.querySelector('#address2-input');
-const shippingCity = document.querySelector('#city-input');
-const shippingState = document.querySelector('#state-input');
-const shippingZip = document.querySelector('#zip-input');
+var shippingName = document.querySelector('#name-input');
+var shippingEmail = document.querySelector('#email-input');
+var shippingAddressOne = document.querySelector('#address1-input');
+var shippingAddressTwo = document.querySelector('#address2-input');
+var shippingCity = document.querySelector('#city-input');
+var shippingState = document.querySelector('#state-input');
+var shippingZip = document.querySelector('#zip-input');
 
 //Checkout Summary controls
-const checkoutProductName = document.querySelector('#checkout-product-name');
-const checkoutShipping = document.querySelector('#checkout-shipping');
-const checkoutTotal = document.querySelector('#checkout-total');
-const checkoutAddressName = document.querySelector('#checkout-address-name');
-const checkoutAddressOne = document.querySelector('#checkout-address1');
-const checkoutAddressCityStateZip = document.querySelector('#checkout-address-city-state-zip');
-const completeOrderButton = document.querySelector('#complete-order');
+var checkoutProductName = document.querySelector('#checkout-product-name');
+var checkoutShipping = document.querySelector('#checkout-shipping');
+var checkoutTotal = document.querySelector('#checkout-total');
+var checkoutAddressName = document.querySelector('#checkout-address-name');
+var checkoutAddressOne = document.querySelector('#checkout-address1');
+var checkoutAddressCityStateZip = document.querySelector('#checkout-address-city-state-zip');var varcompleteOrderButton = document.querySelector('#complete-order');
 
 
 
@@ -34,7 +26,8 @@ function populateProductInfo(){
     console.log(orderSelectSize.value);
 }
 
-completeOrderButton.addEventListener('click', function (event) {
-    event.preventDefault();
-    populateProductInfo();
-})
+// completeOrderButton.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     populateProductInfo();
+// })
+console.log("test");
