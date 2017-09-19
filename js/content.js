@@ -24,3 +24,17 @@ const checkoutTotal = document.querySelector('#checkout-total');
 const checkoutAddressName = document.querySelector('#checkout-address-name');
 const checkoutAddressOne = document.querySelector('#checkout-address1');
 const checkoutAddressCityStateZip = document.querySelector('#checkout-address-city-state-zip');
+const completeOrderButton = document.querySelector('#complete-order');
+
+
+
+
+function populateProductInfo(){
+    console.log(orderSelectColor.value);
+    console.log(orderSelectSize.value);
+}
+
+completeOrderButton.addEventListener('click', function (event) {
+    event.preventDefault();
+    populateProductInfo();
+})
