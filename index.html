@@ -27,7 +27,7 @@
                     <legend>Select a size</legend>
 
                     <div class="size-control-set">
-                        <input type="radio" name="size" id="order-small-shirt" value="Small">
+                        <input type="radio" name="size" id="order-small-shirt" value="Small" checked>
                         <label for="order-small-shirt">Small</label>
 
                         <input type="radio" name="size" id="order-medium-shirt" value="Medium">
@@ -44,7 +44,7 @@
                     <legend>Select a color</legend>
 
                     <div class="color-control-set">
-                        <input type="radio" name="color" id="white-shirt" value="White">
+                         <input type="radio" name="color" id="white-shirt" value="White" checked >
                         <label for="white-shirt">White</label>
 
                         <input type="radio" name="color" id="red-shirt" value="Red">
@@ -359,34 +359,37 @@
                 <div class="checkout-summary">
                     <!-- shirt type "Basic V-Neck Tee + size + color, price $20-->
                     <label for="checkout-product-name">Product Name</label>
-                    <input type="text" name="checkout-product-name" id="checkout-product-name" disabled="disabled">
-                    <!--<p id="checkout-product-name"></p>-->
+                    <input type="text" name="checkout-product-name" id="checkout-product-name" disabled="disabled" value="">
+                    <input type="text" name="checkout-product-name" id="checkout-product-price" disabled="disabled" value="$20.00">
+                    <hr>
                 </div>
+
                 <div class="checkout-summary">
                     <!-- shipping price which is free-->
                     <label for="checkout-shipping">Shipping</label>
-                    <input type="text" name="checkout-shippingt" id="checkout-shipping" disabled="disabled">
-                    <!--<p id="checkout-shipping"></p>-->
+                    <input type="text" name="checkout-shipping" id="checkout-shipping" disabled="disabled" value="FREE">
                 </div>
+
                 <div class="checkout-summary">
                     <!-- display price of shirt-->
                     <label for="checkout-total">Total</label>
-                    <input type="text" name="checkout-total" id="checkout-total" disabled="disabled">
-                    <!--<p id="checkout-total"></p>-->
+                    <input type="text" name="checkout-total" id="checkout-total" disabled="disabled" value="$20.00">
+                    <hr>
                 </div>
+
                 <div class="checkout-summary">
                     <!-- display shipping address-->
                     <h3>Shipping Address</h3>
                     <!--<p id="checkout-address-name"></p>-->
                     <!--<p id="checkout-address1"></p>-->
                     <!--<p id="checkout-address-city-state-zip"></p>-->
-                    <input type="text" name="" id="checkout-address-name" >
-                    <input type="text" name="" id="checkout-address1" >
-                    <input type="text" name="" id="checkout-address-city-state-zip" >
+                    <input type="text" name="" id="checkout-address-name" value="">
+                    <input type="text" name="" id="checkout-address1" value="">
+                    <input type="text" name="" id="checkout-address-city-state-zip" value="" >
                 </div>
                 <div>
                     <!-- Button to submit the form -->
-                    <button type="submit" id="complete-order">Complete Order</button>
+                    <button type="submit" value="Submit" id="complete-order">Complete Order</button>
                 </div>
             </form>
         </section>
