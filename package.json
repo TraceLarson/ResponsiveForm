@@ -1,0 +1,28 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "Responsive Accessible Form using SCSS, HTML and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TraceLarson/ResponsiveForm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TraceLarson/ResponsiveForm/issues"
+  },
+  "homepage": "https://github.com/TraceLarson/ResponsiveForm#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.1.4",
+    "gulp-postcss": "^7.0.0"
+  }
+}
