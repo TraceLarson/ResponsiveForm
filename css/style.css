@@ -1,0 +1,30 @@
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start; }
+
+.color-control-set {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px;
+  background-color: #FEFFFF; }
+
+#white-shirt {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 20px; }
+
+#red-shirt {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 20px; }
+
+#blue-shirt {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 20px; }
+
+#black-shirt {
+  -webkit-appearance: none;
+  width: 50px;
+  height: 20px; }

@@ -1,0 +1,44 @@
+@import 'variables.scss';
+@import 'type.scss';
+@import 'placeholders.scss';
+@import 'mixins.scss';
+@import 'base.scss';
+
+
+
+main{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+section{
+
+}
+
+.color-control-set{
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 10px;
+  background-color: $order-background-color;
+}
+
+#white-shirt{
+  @include colorControl;
+}
+
+#red-shirt{
+  @include colorControl;
+
+}
+
+#blue-shirt{
+  @include colorControl;
+
+}
+
+#black-shirt{
+  @include colorControl;
+
+}
+

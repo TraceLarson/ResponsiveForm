@@ -5,7 +5,6 @@
     <title>Responsive Form</title>
     <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/content.js"></script>
 </head>
 <body>
     <header roll="banner">
@@ -13,7 +12,7 @@
     </header>
 
     <main roll="main">
-        <section roll="order-form" id="order-form">
+        <section roll="orderform" id="order-form">
             <h2>Basic V-Neck Tee</h2>
             <form roll="choose product">
                 <div roll="display-shirt">
@@ -22,7 +21,7 @@
                     <p id="order-shirt-price">$20.00</p>
                 </div>
 
-                <fieldset roll="select-size" id="order-select-size">
+                <fieldset roll="selectsize" id="order-select-size">
                     <!--radio buttons for shirt size-->
                     <legend>Select a size</legend>
 
@@ -62,26 +61,26 @@
             </form>
         </section>
 
-        <section roll="shipping-details" id="shipping-details">
+        <section roll="displayshippingdetails" id="shipping-details">
             <h2>Shipping Details</h2>
             <form roll="input-shipping-details">
                 <div class="shipping-info">
                     <!-- Name input form-->
                     <label for="name-input">Name</label>
-                    <input type="text" name="name-input" id="name-input" required>
+                    <input type="text" name="name-input" id="name-input" minlength="3" required>
                 </div>
                 <div class="shipping-info">
                     <!-- Email input form-->
                     <label for="email-input">Email</label>
-                    <input type="email" name="email-input" id="email-input" required>
+                    <input type="email" name="email-input" id="email-input" minlength="11" required>
                 </div>
                 <div class="shipping-info">
                     <!-- Address input form-->
                     <label for="address1-input">Address 1</label>
-                    <input type="text" name="address1-input" id="address1-input" required>
+                    <input type="text" name="address1-input" id="address1-input" minlength="3" required>
                     <!-- Address2 input form-->
                     <label for="address2-input">Address 2</label>
-                    <input type="text" name="address2-input" id="address2-input"
+                    <input type="text" name="address2-input" id="address2-input">
                 </div>
                 <div class="shipping-info">
                     <!-- city input form-->
@@ -89,10 +88,10 @@
                     <input type="text" name="city-input" id="city-input" required>
                     <!-- state input form-->
                     <label for="state-input">State</label>
-                    <input type="text" maxlength="2" name="state-input" id="state-input" required pattern="[A-Z]{2}">
+                    <input type="text" minlength="2" maxlength="2" name="state-input" id="state-input" required pattern="[A-Z]{2}">
                     <!-- ZipCode input form-->
                     <label for="zip-input">Zip</label>
-                    <input type="number" maxlength="5" name="zip-input" id="zip-input" required pattern="\d{5}">
+                    <input type="number" minlength="5" maxlength="5" name="zip-input" id="zip-input" required pattern="\d{5}">
                 </div>
                 <div class="shipping-info">
                     <!-- Country input form / drop down -->
@@ -353,7 +352,7 @@
             </form>
         </section>
 
-        <section roll="checkout-summary" id="checkout-summary">
+        <section roll="checkoutsummary" id="checkout-summary">
             <h2>Order Summary</h2>
             <form>
                 <div class="checkout-summary">
