@@ -1,30 +1,138 @@
-main {
+body {
+  font-family: Arial, sans-serif; }
+
+h1 {
+  font-size: 3rem;
+  text-indent: -9999px; }
+
+h2 {
+  font-size: 2rem; }
+
+legend {
+  font-size: 1.25rem;
+  font-weight: bold; }
+
+#order-shirt-price {
+  font-size: 2rem;
+  font-weight: lighter; }
+
+label {
+  font-size: 1.1rem;
+  font-weight: bold; }
+
+h2 {
+  margin-bottom: 10px; }
+
+@media (min-width: 600px) {
+  main {
+    border: 2px solid mediumpurple;
+    display: flex;
+    flex-flow: row nowrap; } }
+
+section {
+  flex: 1;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start; }
+  flex-flow: column wrap;
+  padding: 2%; }
+
+#order-shirt-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: flex-start; }
+  #order-shirt-container img {
+    max-width: 300px;
+    margin: auto; }
+  #order-shirt-container p {
+    align-self: flex-end; }
+
+fieldset {
+  margin-top: 20px; }
+
+.size-control-set {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  background-color: #FEFFFF; }
+  .size-control-set label {
+    text-indent: -9999px; }
+
+#order-small-shirt {
+  -webkit-appearance: none;
+  flex-basis: 30%;
+  height: 50px;
+  background-color: #DADBDD;
+  background: url("../images/smallButton.png") center/cover no-repeat; }
+
+#order-medium-shirt {
+  -webkit-appearance: none;
+  flex-basis: 30%;
+  height: 50px;
+  background-color: #DADBDD;
+  background: url("../images/mediumButton.png") center/cover no-repeat; }
+
+#order-large-shirt {
+  -webkit-appearance: none;
+  flex-basis: 30%;
+  height: 50px;
+  background-color: #DADBDD;
+  background: url("../images/largeButton.png") center/cover no-repeat; }
 
 .color-control-set {
   display: flex;
   flex-flow: row nowrap;
-  padding: 10px;
+  justify-content: space-between;
+  flex: 1;
   background-color: #FEFFFF; }
+  .color-control-set label {
+    text-indent: -9999px; }
 
-#white-shirt {
+#green-shirt {
   -webkit-appearance: none;
-  width: 50px;
-  height: 20px; }
+  flex-basis: 20%;
+  height: 50px;
+  background-color: #55AB69; }
 
 #red-shirt {
   -webkit-appearance: none;
-  width: 50px;
-  height: 20px; }
+  flex-basis: 20%;
+  height: 50px;
+  background-color: #E64C4D; }
 
 #blue-shirt {
   -webkit-appearance: none;
-  width: 50px;
-  height: 20px; }
+  flex-basis: 20%;
+  height: 50px;
+  background-color: #2693D6; }
 
 #black-shirt {
   -webkit-appearance: none;
-  width: 50px;
-  height: 20px; }
+  flex-basis: 20%;
+  height: 50px;
+  background-color: #454546; }
+
+#shipping-details {
+  flex: 1;
+  border: 2px solid greenyellow;
+  background-color: #EFF0F1; }
+  #shipping-details form {
+    border: 2px solid blue; }
+
+.shipping-info {
+  border: 2px solid pink;
+  display: flex;
+  flex-flow: column wrap; }
+  .shipping-info input {
+    border: 1px solid black;
+    background-color: #EAEBED;
+    height: 65px; }
+  .shipping-info:nth-of-type(3) {
+    flex-flow: row wrap; }
+    .shipping-info:nth-of-type(3) label {
+      display: block; }
+  .shipping-info:nth-of-type(4) {
+    flex-flow: row; }
+
+#checkout-summary {
+  flex: 1; }

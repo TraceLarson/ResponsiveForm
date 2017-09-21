@@ -1,11 +1,15 @@
 @mixin sizeControl{
-
+  -webkit-appearance: none;
+  flex-basis: 30%;
+  height: 50px;
+  background-color: $order-size-radio-color;
 }
 
 @mixin colorControl{
   -webkit-appearance: none;
-  width: 50px;
-  height: 20px;
+  flex-basis: 20%;
+  height: 50px;
+
 }
 
 @mixin textForm{

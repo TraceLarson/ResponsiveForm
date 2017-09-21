@@ -64,6 +64,14 @@ if (shippingZip) {
 	});
 }
 
+const shippingCountry = document.querySelector('#country-select');
+console.log(shippingCountry.options[shippingCountry.selectedIndex].value);
+if(shippingCountry){
+	shippingCountry.addEventListener('change', () =>{
+		checkoutCountry.value = shippingCountry.options[shippingCountry.selectedIndex].value;
+	})
+}
+
 //Checkout Summary controls
 const checkoutProductName = document.querySelector('#checkout-product-name');
 //const checkoutShipping = document.querySelector('#checkout-shipping');
@@ -71,7 +79,10 @@ const checkoutProductName = document.querySelector('#checkout-product-name');
 const checkoutAddressName = document.querySelector('#checkout-address-name');
 const checkoutAddressOne = document.querySelector('#checkout-address1');
 const checkoutAddressCityStateZip = document.querySelector('#checkout-address-city-state-zip');
+const checkoutCountry = document.querySelector('#checkout-country');
 const completeOrderButton = document.querySelector('#complete-order');
+
+
 
 
 function getSize() {
@@ -97,6 +108,8 @@ function changeShirtImage(color) {
 	orderShirtImage.setAttribute('src', 'images/' + color + '-v-neck.jpg');
 	orderShirtImage.setAttribute('alt', color + '-v-neck');
 }
+
+
 
 
 //Class to validate form inputs
