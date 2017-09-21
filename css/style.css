@@ -23,17 +23,21 @@ label {
 h2 {
   margin-bottom: 10px; }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
+  body {
+    display: flex; }
   main {
     border: 2px solid mediumpurple;
     display: flex;
-    flex-flow: row nowrap; } }
+    flex-flow: row nowrap;
+    align-content: center;
+    max-width: 1400px; } }
 
 section {
   flex: 1;
   display: flex;
   flex-flow: column wrap;
-  padding: 2%; }
+  padding: 1%; }
 
 #order-shirt-container {
   display: flex;
@@ -117,22 +121,40 @@ fieldset {
   border: 2px solid greenyellow;
   background-color: #EFF0F1; }
   #shipping-details form {
-    border: 2px solid blue; }
+    padding: 2px; }
 
 .shipping-info {
-  border: 2px solid pink;
   display: flex;
   flex-flow: column wrap; }
   .shipping-info input {
-    border: 1px solid black;
+    border: 1px solid grey;
+    background-color: #EAEBED;
+    height: 65px;
+    width: 100%; }
+  .shipping-info select {
     background-color: #EAEBED;
     height: 65px; }
   .shipping-info:nth-of-type(3) {
-    flex-flow: row wrap; }
-    .shipping-info:nth-of-type(3) label {
-      display: block; }
+    flex-flow: row;
+    justify-content: space-between; }
+    .shipping-info:nth-of-type(3) #address1-container, .shipping-info:nth-of-type(3) #address2-container {
+      flex: 1; }
+      .shipping-info:nth-of-type(3) #address1-container label, .shipping-info:nth-of-type(3) #address2-container label {
+        display: block; }
+      .shipping-info:nth-of-type(3) #address1-container input, .shipping-info:nth-of-type(3) #address2-container input {
+        width: 100%; }
   .shipping-info:nth-of-type(4) {
     flex-flow: row; }
+    .shipping-info:nth-of-type(4) #city-input-container label, .shipping-info:nth-of-type(4) #state-input-container label, .shipping-info:nth-of-type(4) #zip-input-container label {
+      display: block; }
+    .shipping-info:nth-of-type(4) #city-input-container input, .shipping-info:nth-of-type(4) #state-input-container input, .shipping-info:nth-of-type(4) #zip-input-container input {
+      width: 100%; }
+  .shipping-info:nth-of-type(5) {
+    border: 2px solid fuchsia; }
+    .shipping-info:nth-of-type(5) label {
+      display: block; }
+    .shipping-info:nth-of-type(5) select {
+      width: 100%; }
 
 #checkout-summary {
   flex: 1; }
