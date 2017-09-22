@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif; }
+  font-family: Tahoma, Arial, sans-serif; }
 
 h1 {
   font-size: 3rem;
@@ -7,6 +7,10 @@ h1 {
 
 h2 {
   font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: lighter; }
 
 legend {
   font-size: 1.25rem;
@@ -20,24 +24,49 @@ label {
   font-size: 1.1rem;
   font-weight: bold; }
 
+.checkout:nth-of-type(2) > label {
+  color: #818283;
+  font-weight: lighter;
+  font-size: 1.2rem; }
+
+input, select {
+  font-size: 1.25rem; }
+
+.checkout > input {
+  font-size: 1rem; }
+
+#checkout-product-name {
+  font-size: 1.1rem;
+  font-weight: bold; }
+
+.error {
+  color: red; }
+
 h2 {
   margin-bottom: 10px; }
 
-@media (min-width: 900px) {
-  body {
-    display: flex; }
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+
+main {
+  max-width: 600px; }
+
+@media (min-width: 1000px) {
   main {
-    border: 2px solid mediumpurple;
     display: flex;
     flex-flow: row nowrap;
-    align-content: center;
-    max-width: 1400px; } }
+    max-width: 1500px; } }
 
 section {
   flex: 1;
   display: flex;
   flex-flow: column wrap;
-  padding: 1%; }
+  padding: 5px 5px 5px 5px; }
+
+#order-form {
+  padding-bottom: 10%; }
 
 #order-shirt-container {
   display: flex;
@@ -51,6 +80,9 @@ section {
 
 fieldset {
   margin-top: 20px; }
+
+legend {
+  margin: 20px 0 20px 0; }
 
 .size-control-set {
   display: flex;
@@ -117,19 +149,22 @@ fieldset {
   background-color: #454546; }
 
 #shipping-details {
-  flex: 1;
-  border: 2px solid greenyellow;
   background-color: #EFF0F1; }
   #shipping-details form {
-    padding: 2px; }
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between; }
 
 .shipping-info {
   display: flex;
-  flex-flow: column wrap; }
+  flex-flow: column wrap;
+  margin: 5px 0 5px 0; }
+  .shipping-info label {
+    margin-bottom: 5px; }
   .shipping-info input {
     border: 1px solid grey;
     background-color: #EAEBED;
-    height: 65px;
+    height: 55px;
     width: 100%; }
   .shipping-info select {
     background-color: #EAEBED;
@@ -138,23 +173,109 @@ fieldset {
     flex-flow: row;
     justify-content: space-between; }
     .shipping-info:nth-of-type(3) #address1-container, .shipping-info:nth-of-type(3) #address2-container {
-      flex: 1; }
-      .shipping-info:nth-of-type(3) #address1-container label, .shipping-info:nth-of-type(3) #address2-container label {
-        display: block; }
-      .shipping-info:nth-of-type(3) #address1-container input, .shipping-info:nth-of-type(3) #address2-container input {
-        width: 100%; }
+      display: flex;
+      flex-flow: column; }
   .shipping-info:nth-of-type(4) {
-    flex-flow: row; }
-    .shipping-info:nth-of-type(4) #city-input-container label, .shipping-info:nth-of-type(4) #state-input-container label, .shipping-info:nth-of-type(4) #zip-input-container label {
-      display: block; }
-    .shipping-info:nth-of-type(4) #city-input-container input, .shipping-info:nth-of-type(4) #state-input-container input, .shipping-info:nth-of-type(4) #zip-input-container input {
-      width: 100%; }
-  .shipping-info:nth-of-type(5) {
-    border: 2px solid fuchsia; }
-    .shipping-info:nth-of-type(5) label {
-      display: block; }
-    .shipping-info:nth-of-type(5) select {
-      width: 100%; }
+    flex-flow: row;
+    justify-content: space-between; }
+    .shipping-info:nth-of-type(4) #city-input-container, .shipping-info:nth-of-type(4) #state-input-container, .shipping-info:nth-of-type(4) #zip-input-container {
+      display: flex;
+      flex-flow: column nowrap; }
+      .shipping-info:nth-of-type(4) #city-input-container input, .shipping-info:nth-of-type(4) #state-input-container input, .shipping-info:nth-of-type(4) #zip-input-container input {
+        width: 100%; }
+  .shipping-info:nth-of-type(5) label {
+    display: block; }
+  .shipping-info:nth-of-type(5) select {
+    width: 100%; }
 
-#checkout-summary {
-  flex: 1; }
+.summary {
+  background: #E3E4E6; }
+  .summary form {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start; }
+  .summary .checkout {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 5px 0 5px 0; }
+    .summary .checkout input {
+      background-color: #E3E4E6;
+      flex: 1;
+      text-align: right; }
+    .summary .checkout #checkout-product-price {
+      width: 10%; }
+    .summary .checkout #checkout-product-name {
+      text-align: left;
+      flex: 3; }
+  .summary .checkout:nth-of-type(4) {
+    flex-flow: column nowrap; }
+    .summary .checkout:nth-of-type(4) h3 {
+      padding: 10px 0 10px 0; }
+    .summary .checkout:nth-of-type(4) input {
+      text-align: left;
+      margin-right: auto; }
+  .summary .button {
+    margin-top: auto;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+  .summary button {
+    height: 50px;
+    background-color: #22A456;
+    color: #EFF0F1;
+    font-size: 1.25rem;
+    flex-basis: 80%; }
+  .summary hr {
+    width: 100%; }
+
+.completed {
+  border: 1px solid red;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  top: 0; }
+  .completed form {
+    border: 1px solid red;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center; }
+  .completed .checkout {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 5px 0 5px 0; }
+    .completed .checkout input {
+      background-color: white;
+      flex: 1;
+      text-align: right; }
+    .completed .checkout #checkout-product-price {
+      width: 10%; }
+    .completed .checkout #checkout-product-name {
+      text-align: left;
+      flex: 3; }
+  .completed .checkout:nth-of-type(4) {
+    border: 1px solid green;
+    margin-right: auto;
+    flex-flow: column nowrap; }
+    .completed .checkout:nth-of-type(4) h3 {
+      padding: 10px 0 10px 0; }
+    .completed .checkout:nth-of-type(4) input {
+      text-align: left;
+      margin-right: auto; }
+  .completed .button {
+    margin-top: auto;
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+  .completed button {
+    visibility: hidden; }
+  .completed hr {
+    width: 100%; }

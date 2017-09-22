@@ -366,42 +366,41 @@
             </form>
         </section>
 
-        <section roll="checkoutsummary" id="checkout-summary">
+        <section roll="checkoutsummary" id="checkout-summary" class="summary">
             <h2>Order Summary</h2>
-            <form>
-                <div class="checkout-summary">
+            <form action="complete.html" method="post">
+                <div class="checkout">
                     <!-- shirt type "Basic V-Neck Tee + size + color, price $20-->
-                    <label for="checkout-product-name">Product Name</label>
+                    <!--<label for="checkout-product-name">Product Name</label>-->
                     <input type="text" name="checkout-product-name" id="checkout-product-name" disabled="disabled" value="">
                     <input type="text" name="checkout-product-name" id="checkout-product-price" disabled="disabled" value="$20.00">
-                    <hr>
                 </div>
+                <hr>
 
-                <div class="checkout-summary">
+                <div class="checkout">
                     <!-- shipping price which is free-->
                     <label for="checkout-shipping">Shipping</label>
                     <input type="text" name="checkout-shipping" id="checkout-shipping" disabled="disabled" value="FREE">
                 </div>
 
-                <div class="checkout-summary">
+                <div class="checkout">
                     <!-- display price of shirt-->
                     <label for="checkout-total">Total</label>
                     <input type="text" name="checkout-total" id="checkout-total" disabled="disabled" value="$20.00">
-                    <hr>
                 </div>
-
-                <div class="checkout-summary">
+                <hr>
+                <div class="checkout">
                     <!-- display shipping address-->
                     <h3>Shipping Address</h3>
                     <!--<p id="checkout-address-name"></p>-->
                     <!--<p id="checkout-address1"></p>-->
                     <!--<p id="checkout-address-city-state-zip"></p>-->
-                    <input type="text" name="" id="checkout-address-name" disabled="disabled" value="">
-                    <input type="text" name="" id="checkout-address1" disabled="disabled" value="">
-                    <input type="text" name="" id="checkout-address-city-state-zip" disabled="disabled" value="" >
-                    <input type="text" name="" id="checkout-country" disabled="disabled" value="">
+                    <input type="text" name="" id="checkout-address-name" disabled="disabled" value="" required>
+                    <input type="text" name="" id="checkout-address1" disabled="disabled" value=""required>
+                    <input type="text" name="" id="checkout-address-city-state-zip" disabled="disabled" value="" required>
+                    <input type="text" name="" id="checkout-country" disabled="disabled" value=""required>
                 </div>
-                <div>
+                <div class="button">
                     <!-- Button to submit the form -->
                     <button type="submit" value="Submit" id="complete-order">Complete Order</button>
                 </div>

@@ -2,6 +2,10 @@
  * Created by tracelarson on 9/19/17.
  */
 //Order Form controls and event listeners
+window.onload = () => {
+	populateOrderSummary();
+};
+
 const orderShirtImage = document.querySelector('#order-display-shirt');
 
 const orderSelectSize = document.getElementsByName('size');
@@ -109,7 +113,9 @@ function changeShirtImage(color) {
 	orderShirtImage.setAttribute('alt', color + '-v-neck');
 }
 
-
+function displaySuccess(){
+	window.open('complete.html');
+}
 
 
 //Class to validate form inputs
@@ -145,28 +151,39 @@ class IsValid {
 
 }
 
+
 if (completeOrderButton) {
 	completeOrderButton.addEventListener('click', (event) => {
 		event.preventDefault();
 
 		let validateArray = [shippingName, shippingEmail, shippingAddressOne, shippingCity, shippingState, shippingZip];
 		validateArray.forEach((control) => {
+
 			let validate = new IsValid(control, control.getAttribute('type'));
 			let errorMessages = validate.getErrorMessages();
+
+			if(document.getElementsByClassName('error')){
+				let parentNode = control.parentNode;
+				for(let i = 0; i < parentNode.getElementsByTagName('p').length; i++) {
+					parentNode.removeChild(parentNode.getElementsByTagName('p')[i]);
+				}
+			}
 
 			if (errorMessages.length > 0) {
 				errorMessages.forEach((err) => {
 					control.insertAdjacentHTML('afterend', '<p class="error">' + err + '</p>');
 				})
-			}else if(errorMessages.length == 0 && document.getElementsByClassName('error')){
+			}else if(errorMessages.length == 0 && document.getElementsByClassName('error')) {
 				//let parentNode = document.getElementsByClassName('shipping-info');
 				let parentNode = control.parentNode;
-				for(let i = 0; i < parentNode.getElementsByTagName('p').length; i++){
+				for (let i = 0; i < parentNode.getElementsByTagName('p').length; i++) {
 					parentNode.removeChild(parentNode.getElementsByTagName('p')[i]);
 				}
+			}else if(errorMessages.length == 0 && !document.getElementsByClassName('error')){
+				console.log('hey');
+				displaySuccess();
 			}
-		})
-
+		});
 
 	});
 }

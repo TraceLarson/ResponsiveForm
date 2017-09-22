@@ -1,5 +1,5 @@
 body{
-  font-family: Arial, sans-serif;
+  font-family: Tahoma, Arial, sans-serif;
 }
 
 h1{
@@ -9,6 +9,11 @@ h1{
 
 h2{
   font-size: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: lighter;
 }
 
 
@@ -29,4 +34,26 @@ legend{
 label{
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+.checkout:nth-of-type(2) > label{
+  color: $checkout-inactive-color;
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+
+input, select{
+  font-size: 1.25rem;
+}
+.checkout > input {
+  font-size: 1rem;
+}
+
+#checkout-product-name{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.error{
+  color: $shipping-form-error-color;
 }
