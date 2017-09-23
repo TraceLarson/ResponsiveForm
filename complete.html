@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Order Complete</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section>
+    <section class="hidden">
+    <!--class="completed"-->
         <h1>Order Completed</h1>
         <h2>Order Summary</h2>
         <div>
-            <p></p>
+            <p id="completed-product"></p>
             <p>$20.00</p>
         </div>
         <hr>
@@ -24,12 +27,16 @@
         <hr>
         <div>
             <h3>shipping Address</h3>
-            <p></p>
-            <p></p>
-            <p></p>
+            <p id="completed-name"></p>
+            <p id="completed-address1"></p>
+            <p id="completed-address-city-state-zip"></p>
+            <p id="completed-country"></p>
         </div>
         <img src="images/circle-check.svg" alt="circle check"/>
     </section>
-    
+
+    <footer>
+        <script type="text/javascript" src="js/content.js"></script>
+    </footer>
 </body>
 </html>

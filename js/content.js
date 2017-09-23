@@ -4,7 +4,11 @@
 //Order Form controls and event listeners
 window.onload = () => {
 	populateOrderSummary();
+	orderCompleted.setAttribute('class','hidden');
 };
+
+//Oder sections
+const orderFormSection = document.getElementById('order-form');
 
 const orderShirtImage = document.querySelector('#order-display-shirt');
 
@@ -24,6 +28,8 @@ for (let i = 0; i < orderSelectColor.length; i++) {
 }
 
 //Shipping Details controls
+const shippingDetailsSection = document.getElementById('shipping-details')
+
 const shippingName = document.querySelector('#name-input');
 if (shippingName) {
 	shippingName.addEventListener('change', () => {
@@ -77,6 +83,8 @@ if(shippingCountry){
 }
 
 //Checkout Summary controls
+const checkoutSummarySection = document.getElementById('checkout-summary');
+
 const checkoutProductName = document.querySelector('#checkout-product-name');
 //const checkoutShipping = document.querySelector('#checkout-shipping');
 //const checkoutTotal = document.querySelector('#checkout-total');
@@ -86,8 +94,18 @@ const checkoutAddressCityStateZip = document.querySelector('#checkout-address-ci
 const checkoutCountry = document.querySelector('#checkout-country');
 const completeOrderButton = document.querySelector('#complete-order');
 
+//Completed Order Summary Page controls
+const completedProduct = document.getElementById('completed-product');
+const completedName = document.getElementById('completed-name');
+const completedAddressOne = document.getElementById('completed-address1');
+const completedAddressCityStateZip = document.getElementById('completed-address-city-state-zip');
+const completedCountry = document.getElementById('completed-country');
 
+// error class
+const error = document.getElementsByClassName('error');
 
+//Completed Order section
+const orderCompleted = document.getElementById('order-completed');
 
 function getSize() {
 	for (let i = 0; i < orderSelectSize.length; i++) {
@@ -114,7 +132,19 @@ function changeShirtImage(color) {
 }
 
 function displaySuccess(){
-	window.open('complete.html');
+    orderCompleted.setAttribute('class','completed');
+    orderFormSection.setAttribute('class','hidden');
+    shippingDetailsSection.setAttribute('class','hidden');
+    checkoutSummarySection.setAttribute('class','hidden');
+
+    completedProduct.innerHTML = checkoutProductName.value.toString();
+    completedName.innerHTML =  checkoutAddressName.value.toString();
+    completedAddressOne.innerHTML = checkoutAddressOne.value.toString();
+    completedAddressCityStateZip.innerHTML = checkoutAddressCityStateZip.value.toString();
+    completedCountry.innerHTML = checkoutCountry.value.toString();
+
+
+
 }
 
 
@@ -162,7 +192,7 @@ if (completeOrderButton) {
 			let validate = new IsValid(control, control.getAttribute('type'));
 			let errorMessages = validate.getErrorMessages();
 
-			if(document.getElementsByClassName('error')){
+			if(error){
 				let parentNode = control.parentNode;
 				for(let i = 0; i < parentNode.getElementsByTagName('p').length; i++) {
 					parentNode.removeChild(parentNode.getElementsByTagName('p')[i]);
@@ -173,17 +203,21 @@ if (completeOrderButton) {
 				errorMessages.forEach((err) => {
 					control.insertAdjacentHTML('afterend', '<p class="error">' + err + '</p>');
 				})
-			}else if(errorMessages.length == 0 && document.getElementsByClassName('error')) {
+			}else if(errorMessages.length == 0 && error) {
 				//let parentNode = document.getElementsByClassName('shipping-info');
 				let parentNode = control.parentNode;
 				for (let i = 0; i < parentNode.getElementsByTagName('p').length; i++) {
 					parentNode.removeChild(parentNode.getElementsByTagName('p')[i]);
 				}
-			}else if(errorMessages.length == 0 && !document.getElementsByClassName('error')){
-				console.log('hey');
-				displaySuccess();
 			}
+			// else if(errorMessages.length == 0 && !error){
+			// 	console.log('hey');
+			// 	displaySuccess();
+			// }
 		});
+        if(error.length == 0){
+            displaySuccess();
+        }
 
 	});
 }
