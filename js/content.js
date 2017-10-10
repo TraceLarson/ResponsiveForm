@@ -33,7 +33,7 @@ const shippingDetailsSection = document.getElementById('shipping-details')
 const shippingName = document.querySelector('#name-input');
 if (shippingName) {
 	shippingName.addEventListener('change', () => {
-		checkoutAddressName.value = shippingName.value;
+		checkoutAddressName.innerHTML = shippingName.value;
 	});
 }
 
@@ -42,35 +42,35 @@ const shippingEmail = document.querySelector('#email-input');
 const shippingAddressOne = document.querySelector('#address1-input');
 if (shippingAddressOne) {
 	shippingAddressOne.addEventListener('change', () => {
-		checkoutAddressOne.value = shippingAddressOne.value;
+		checkoutAddressOne.innerHTML = shippingAddressOne.value;
 	});
 }
 
 const shippingAddressTwo = document.querySelector('#address2-input');
 if (shippingAddressTwo) {
 	shippingAddressTwo.addEventListener('change', () => {
-		checkoutAddressOne.value += ' , ' + shippingAddressTwo.value;
+		checkoutAddressOne.innerHTML += ' , ' + shippingAddressTwo.value;
 	});
 }
 
 const shippingCity = document.querySelector('#city-input');
 if (shippingCity) {
 	shippingCity.addEventListener('change', () => {
-		checkoutAddressCityStateZip.value = shippingCity.value + ', ';
+		checkoutAddressCityStateZip.innerHTML = shippingCity.value + ', ';
 	});
 }
 
 const shippingState = document.querySelector('#state-input');
 if (shippingState) {
 	shippingState.addEventListener('change', () => {
-		checkoutAddressCityStateZip.value += shippingState.value + ' ';
+		checkoutAddressCityStateZip.innerHTML += shippingState.value + ' ';
 	});
 }
 
 const shippingZip = document.querySelector('#zip-input');
 if (shippingZip) {
 	shippingZip.addEventListener('change', () => {
-		checkoutAddressCityStateZip.value += shippingZip.value;
+		checkoutAddressCityStateZip.innerHTML += shippingZip.value;
 	});
 }
 
@@ -78,7 +78,7 @@ const shippingCountry = document.querySelector('#country-select');
 console.log(shippingCountry.options[shippingCountry.selectedIndex].value);
 if(shippingCountry){
 	shippingCountry.addEventListener('change', () =>{
-		checkoutCountry.value = shippingCountry.options[shippingCountry.selectedIndex].value;
+		checkoutCountry.innerHTML = shippingCountry.options[shippingCountry.selectedIndex].value;
 	})
 }
 
@@ -122,7 +122,8 @@ function getColor() {
 }
 
 function populateOrderSummary() {
-	checkoutProductName.value = getSize() + ' Basic V-Neck Tee ' + getColor();
+	// checkoutProductName.value = getSize() + ' Basic V-Neck Tee ' + getColor();
+	checkoutProductName.innerHTML = getSize() + ' Basic V-Neck Tee ' + getColor();
 
 }
 
@@ -137,13 +138,16 @@ function displaySuccess(){
     shippingDetailsSection.setAttribute('class','hidden');
     checkoutSummarySection.setAttribute('class','hidden');
 
-    completedProduct.innerHTML = checkoutProductName.value.toString();
-    completedName.innerHTML =  checkoutAddressName.value.toString();
-    completedAddressOne.innerHTML = checkoutAddressOne.value.toString();
-    completedAddressCityStateZip.innerHTML = checkoutAddressCityStateZip.value.toString();
-    completedCountry.innerHTML = checkoutCountry.value.toString();
-
-
+    // completedProduct.innerHTML = checkoutProductName.value.toString();
+    completedProduct.innerHTML = checkoutProductName.innerHTML;
+    // completedName.innerHTML =  checkoutAddressName.value.toString();
+    completedName.innerHTML =  checkoutAddressName.innerHTML;
+    // completedAddressOne.innerHTML = checkoutAddressOne.value.toString();
+    completedAddressOne.innerHTML = checkoutAddressOne.innerHTML;
+    // completedAddressCityStateZip.innerHTML = checkoutAddressCityStateZip.value.toString();
+    completedAddressCityStateZip.innerHTML = checkoutAddressCityStateZip.innerHTML;
+    // completedCountry.innerHTML = checkoutCountry.value.toString();
+    completedCountry.innerHTML = checkoutCountry.innerHTML;
 
 }
 
