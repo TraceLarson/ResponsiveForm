@@ -67,18 +67,19 @@
                 <div class="shipping-info">
                     <!-- Name input form-->
                     <label for="name-input">Full Name</label>
-                    <input type="text" name="name-input" id="name-input" minlength="3" required>
+                    <input type="text" name="name-input" id="name-input" minlength="1" required>
                 </div>
                 <div class="shipping-info">
                     <!-- Email input form-->
                     <label for="email-input">Email</label>
-                    <input type="email" name="email-input" id="email-input" minlength="11" required>
+                    <input type="email" minlength="7" name="email-input" id="email-input" required
+                           pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
                 </div>
                 <div class="shipping-info">
                     <!-- Address input form-->
                     <div id="address1-container">
                         <label for="address1-input">Address 1</label>
-                        <input type="text" name="address1-input" id="address1-input" minlength="3" required>
+                        <input type="text" minlength="3" name="address1-input" id="address1-input" required>
                     </div>
                     <div id="address2-container">
                         <!-- Address2 input form-->
@@ -90,7 +91,7 @@
                     <!-- city input form-->
                     <div id="city-input-container">
                         <label for="city-input">City</label>
-                        <input type="text" name="city-input" id="city-input" required>
+                        <input type="text" minlength="1" name="city-input" id="city-input">
                     </div>
                     <div id="state-input-container">
                         <!-- state input form-->
@@ -101,7 +102,7 @@
                     <div id="zip-input-container">
                         <!-- ZipCode input form-->
                         <label for="zip-input">Zip</label>
-                        <input type="number" minlength="5" maxlength="5" name="zip-input" id="zip-input" required
+                        <input type="text" minlength="5" maxlength="5" name="zip-input" id="zip-input" required
                                pattern="\d{5}">
                     </div>
                 </div>
@@ -368,45 +369,37 @@
 
         <section role="checkoutsummary" id="checkout-summary" class="summary">
             <h2>Order Summary</h2>
-            <form action="complete.html" method="post">
-                <div class="checkout">
-                    <!-- shirt type "Basic V-Neck Tee + size + color, price $20-->
-                    <!--<label for="checkout-product-name">Product Name</label>-->
-                    <p id="checkout-product-name"></p>
-                    <p id="checkout-product-price"></p>
-                </div>
-                <hr>
+            <div class="checkout">
+                <!-- shirt type "Basic V-Neck Tee + size + color, price $20-->
+                <p id="checkout-product-name"></p>
+                <p id="checkout-product-price"></p>
+            </div>
+            <hr>
 
-                <div class="checkout">
-                    <!-- shipping price which is free-->
-                    <p>Shipping</p>
-                    <p id="checkout-shipping">FREE</p>
-                </div>
+            <div class="checkout">
+                <!-- shipping price which is free-->
+                <p>Shipping</p>
+                <p id="checkout-shipping">FREE</p>
+            </div>
 
-                <div class="checkout">
-                    <!-- display price of shirt-->
-                    <p>Total</p>
-                    <p id="checkout-total">$20.00</p>
-                </div>
-                <hr>
-                <div class="checkout">
-                    <!-- display shipping address-->
-                    <h3>Shipping Address</h3>
-                    <p id="checkout-address-name"></p>
-                    <p id="checkout-address1"></p>
-                    <p id="checkout-address-city-state-zip"></p>
-                    <p id="checkout-country"></p>
-                    <!--<input type="text" name="" id="checkout-address-name" disabled="disabled" value="" required>-->
-                    <!--<input type="text" name="" id="checkout-address1" disabled="disabled" value="" required>-->
-                    <!--<input type="text" name="" id="checkout-address-city-state-zip" disabled="disabled" value=""-->
-                           <!--required>-->
-                    <!--<input type="text" name="" id="checkout-country" disabled="disabled" value="" required>-->
-                </div>
-                <div class="button">
-                    <!-- Button to submit the form -->
-                    <button type="submit" value="Submit" id="complete-order">Complete Order</button>
-                </div>
-            </form>
+            <div class="checkout">
+                <!-- display price of shirt-->
+                <p>Total</p>
+                <p id="checkout-total">$20.00</p>
+            </div>
+            <hr>
+            <div class="checkout">
+                <!-- display shipping address-->
+                <h3>Shipping Address</h3>
+                <p id="checkout-address-name"></p>
+                <p id="checkout-address1"></p>
+                <p id="checkout-address-city-state-zip"></p>
+                <p id="checkout-country"></p>
+            </div>
+            <div class="button">
+                <!-- Button to submit the form -->
+                <button type="submit" value="Submit" id="complete-order">Complete Order</button>
+            </div>
         </section>
 
 
