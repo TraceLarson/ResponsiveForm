@@ -21,38 +21,38 @@
                     <p id="order-shirt-price">$20.00</p>
                 </div>
 
-                <fieldset role="selectsize" id="order-select-size">
+                <fieldset id="order-select-size">
                     <!--radio buttons for shirt size-->
                     <legend>Select a size</legend>
 
-                    <div class="size-control-set">
-                        <input type="radio" name="size" id="order-small-shirt" value="Small" checked>
+                    <div class="size-control-set" role="radiogroup">
+                        <input type="radio" role="radio" name="size" id="order-small-shirt" value="Small" checked="checked">
                         <label for="order-small-shirt">Small</label>
 
-                        <input type="radio" name="size" id="order-medium-shirt" value="Medium">
+                        <input type="radio" role="radio" name="size" id="order-medium-shirt" value="Medium" checked="">
                         <label for="order-medium-shirt">Medium</label>
 
-                        <input type="radio" name="size" id="order-large-shirt" value="Large">
+                        <input type="radio" role="radio" name="size" id="order-large-shirt" value="Large" checked="">
                         <label for="order-large-shirt">Large</label>
                     </div>
 
                 </fieldset>
 
-                <fieldset role="select-color" id="order-select-color">
+                <fieldset id="order-select-color">
                     <!--radio buttons for shirt color-->
                     <legend>Select a color</legend>
 
-                    <div class="color-control-set">
-                        <input type="radio" name="color" id="green-shirt" value="green" checked>
+                    <div class="color-control-set" role="radiogroup">
+                        <input type="radio" role="radio" name="color" id="green-shirt" value="green" checked="checked">
                         <label for="green-shirt">White</label>
 
-                        <input type="radio" name="color" id="red-shirt" value="Red">
+                        <input type="radio" role="radio" name="color" id="red-shirt" value="Red" checked="">
                         <label for="red-shirt">Red</label>
 
-                        <input type="radio" name="color" id="blue-shirt" value="Blue">
+                        <input type="radio" role="radio" name="color" id="blue-shirt" value="Blue" checked="">
                         <label for="blue-shirt">Blue</label>
 
-                        <input type="radio" name="color" id="black-shirt" value="Black">
+                        <input type="radio" role="radio" name="color" id="black-shirt" value="Black" checked="">
                         <label for="black-shirt">Black</label>
                     </div>
 
@@ -61,9 +61,9 @@
             </form>
         </section>
 
-        <section role="displayshippingdetails" id="shipping-details">
+        <section id="shipping-details">
             <h2>Shipping Details</h2>
-            <form role="input-shipping-details">
+            <form role="form">
                 <div class="shipping-info">
                     <!-- Name input form-->
                     <label for="name-input">Full Name</label>
@@ -110,7 +110,7 @@
                     <!-- Country input form / drop down -->
                     <div id="country-select-container">
                         <label for="country-select">Country</label>
-                        <select name="country-select" id="country-select">
+                        <select name="country-select" role="listbox" id="country-select">
                             <option value="AF">Afghanistan</option>
                             <option value="AX">Åland Islands</option>
                             <option value="AL">Albania</option>
@@ -367,14 +367,14 @@
             </form>
         </section>
 
-        <section role="checkoutsummary" id="checkout-summary" class="summary">
+        <section id="checkout-summary" class="summary">
             <h2>Order Summary</h2>
             <div class="checkout">
                 <!-- shirt type "Basic V-Neck Tee + size + color, price $20-->
                 <p id="checkout-product-name"></p>
                 <p id="checkout-product-price"></p>
             </div>
-            <hr>
+            <hr role="separator">
 
             <div class="checkout">
                 <!-- shipping price which is free-->
@@ -387,7 +387,7 @@
                 <p>Total</p>
                 <p id="checkout-total">$20.00</p>
             </div>
-            <hr>
+            <hr role="separator">
             <div class="checkout">
                 <!-- display shipping address-->
                 <h3>Shipping Address</h3>
@@ -398,7 +398,7 @@
             </div>
             <div class="button">
                 <!-- Button to submit the form -->
-                <button type="submit" value="Submit" id="complete-order">Complete Order</button>
+                <button type="submit" role="button" value="Submit" id="complete-order">Complete Order</button>
             </div>
         </section>
 
@@ -413,7 +413,7 @@
                 <p id="completed-product"></p>
                 <p>$20.00</p>
             </div>
-            <hr>
+            <hr role="separator">
             <div>
                 <p>Shipping</p>
                 <p>Free</p>
@@ -422,7 +422,7 @@
                 <p>Total</p>
                 <p>$20.00</p>
             </div>
-            <hr>
+            <hr role="separator">
             <div id="completed-shipping-container">
                 <h3>Shipping Address</h3>
                 <p id="completed-name"></p>

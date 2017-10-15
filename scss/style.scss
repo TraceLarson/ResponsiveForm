@@ -1,8 +1,6 @@
 @import 'variables.scss';
 @import 'type.scss';
-@import 'placeholders.scss';
 @import 'mixins.scss';
-@import 'base.scss';
 
 h1{
   text-indent: -9999px;
@@ -148,7 +146,8 @@ legend {
 .shipping-info { //---divs
   display: flex;
   flex-flow: column wrap;
-  margin: 5px 0 5px 0;
+  margin: 5px;
+
 
   label {
     margin-bottom: 5px;
@@ -167,9 +166,11 @@ legend {
   &:nth-of-type(3) { //-----------------------------Address inputs
     flex-flow: row;
     justify-content: space-between;
+    margin: 0;
     #address1-container, #address2-container {
       display: flex;
       flex-flow: column;
+      margin: 5px;
       label {
 
       }
@@ -181,10 +182,12 @@ legend {
   &:nth-of-type(4) { //----------------------------------City State Zip inputs
     flex-flow: row;
     justify-content: space-between;
-
+    margin: 0;
     #city-input-container, #state-input-container, #zip-input-container {
       display: flex;
       flex-flow: column nowrap;
+      margin: 5px;
+
       input {
         width: 100%;
       }

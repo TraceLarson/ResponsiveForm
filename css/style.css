@@ -160,7 +160,7 @@ legend {
 .shipping-info {
   display: flex;
   flex-flow: column wrap;
-  margin: 5px 0 5px 0; }
+  margin: 5px; }
   .shipping-info label {
     margin-bottom: 5px; }
   .shipping-info input {
@@ -173,16 +173,20 @@ legend {
     height: 65px; }
   .shipping-info:nth-of-type(3) {
     flex-flow: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin: 0; }
     .shipping-info:nth-of-type(3) #address1-container, .shipping-info:nth-of-type(3) #address2-container {
       display: flex;
-      flex-flow: column; }
+      flex-flow: column;
+      margin: 5px; }
   .shipping-info:nth-of-type(4) {
     flex-flow: row;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin: 0; }
     .shipping-info:nth-of-type(4) #city-input-container, .shipping-info:nth-of-type(4) #state-input-container, .shipping-info:nth-of-type(4) #zip-input-container {
       display: flex;
-      flex-flow: column nowrap; }
+      flex-flow: column nowrap;
+      margin: 5px; }
       .shipping-info:nth-of-type(4) #city-input-container input, .shipping-info:nth-of-type(4) #state-input-container input, .shipping-info:nth-of-type(4) #zip-input-container input {
         width: 100%; }
   .shipping-info:nth-of-type(5) label {
