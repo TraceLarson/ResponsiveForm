@@ -83,17 +83,21 @@ legend {
 #order-small-shirt {
   @include sizeControl;
   background: url("../images/smallButton.png") center / cover no-repeat;
+  @include checkedUnChecked;
+
 }
 
 #order-medium-shirt {
   @include sizeControl;
   background: url("../images/mediumButton.png") center / cover no-repeat;
+  @include checkedUnChecked;
 
 }
 
 #order-large-shirt {
   @include sizeControl;
   background: url("../images/largeButton.png") center / cover no-repeat;
+  @include checkedUnChecked;
 
 }
 
@@ -113,22 +117,28 @@ legend {
 #green-shirt {
   @include colorControl;
   background-color: $order-color-radio-green;
+  @include checkedUnChecked;
+
 }
 
 #red-shirt {
   @include colorControl;
   background-color: $order-color-radio-red;
+  @include checkedUnChecked;
+
 }
 
 #blue-shirt {
   @include colorControl;
   background-color: $order-color-radio-blue;
+  @include checkedUnChecked;
 
 }
 
 #black-shirt {
   @include colorControl;
   background-color: $order-color-radio-black;
+  @include checkedUnChecked;
 
 }
 

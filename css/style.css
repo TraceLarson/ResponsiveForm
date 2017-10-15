@@ -101,21 +101,39 @@ legend {
   flex-basis: 30%;
   height: 50px;
   background-color: #DADBDD;
-  background: url("../images/smallButton.png") center/cover no-repeat; }
+  background: url("../images/smallButton.png") center/cover no-repeat;
+  border: 5px solid transparent;
+  transition: border 1s; }
+  #order-small-shirt:checked {
+    border: 5px solid lightblue; }
+  #order-small-shirt:focus {
+    outline: none; }
 
 #order-medium-shirt {
   -webkit-appearance: none;
   flex-basis: 30%;
   height: 50px;
   background-color: #DADBDD;
-  background: url("../images/mediumButton.png") center/cover no-repeat; }
+  background: url("../images/mediumButton.png") center/cover no-repeat;
+  border: 5px solid transparent;
+  transition: border 1s; }
+  #order-medium-shirt:checked {
+    border: 5px solid lightblue; }
+  #order-medium-shirt:focus {
+    outline: none; }
 
 #order-large-shirt {
   -webkit-appearance: none;
   flex-basis: 30%;
   height: 50px;
   background-color: #DADBDD;
-  background: url("../images/largeButton.png") center/cover no-repeat; }
+  background: url("../images/largeButton.png") center/cover no-repeat;
+  border: 5px solid transparent;
+  transition: border 1s; }
+  #order-large-shirt:checked {
+    border: 5px solid lightblue; }
+  #order-large-shirt:focus {
+    outline: none; }
 
 .color-control-set {
   display: flex;
@@ -130,25 +148,49 @@ legend {
   -webkit-appearance: none;
   flex-basis: 20%;
   height: 50px;
-  background-color: #55AB69; }
+  background-color: #55AB69;
+  border: 5px solid transparent;
+  transition: border 1s; }
+  #green-shirt:checked {
+    border: 5px solid lightblue; }
+  #green-shirt:focus {
+    outline: none; }
 
 #red-shirt {
   -webkit-appearance: none;
   flex-basis: 20%;
   height: 50px;
-  background-color: #E64C4D; }
+  background-color: #E64C4D;
+  border: 5px solid transparent;
+  transition: border 1s; }
+  #red-shirt:checked {
+    border: 5px solid lightblue; }
+  #red-shirt:focus {
+    outline: none; }
 
 #blue-shirt {
   -webkit-appearance: none;
   flex-basis: 20%;
   height: 50px;
-  background-color: #2693D6; }
+  background-color: #2693D6;
+  border: 5px solid transparent;
+  transition: border 1s; }
+  #blue-shirt:checked {
+    border: 5px solid lightblue; }
+  #blue-shirt:focus {
+    outline: none; }
 
 #black-shirt {
   -webkit-appearance: none;
   flex-basis: 20%;
   height: 50px;
-  background-color: #454546; }
+  background-color: #454546;
+  border: 5px solid transparent;
+  transition: border 1s; }
+  #black-shirt:checked {
+    border: 5px solid lightblue; }
+  #black-shirt:focus {
+    outline: none; }
 
 #shipping-details {
   background-color: #EFF0F1; }
